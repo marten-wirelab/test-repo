@@ -9,7 +9,7 @@ const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
 });
 const extensions = {
-  '.js': ['JavaScript', t => `//${t}`],
+  '.js': ['JavaScript', t => `/**\n${t}\n*/`],
   '.ts': ['TypeScript', t => `//${t}`],
   '.css': ['CSS', t => `/*${t}*/`],
   '.scss': ['SCSS', t => `/*${t}*/`],
